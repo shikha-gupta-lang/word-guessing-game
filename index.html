@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Word Guess Game</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="game-container">
+    <h1>🔤 Word Guess Game</h1>
+
+    <div class="difficulty">
+      <button onclick="setDifficulty(3)">Easy</button>
+      <button onclick="setDifficulty(5)">Medium</button>
+      <button onclick="setDifficulty(7)">Hard</button>
+    </div>
+
+    <p>🧠 Hint: <span id="hintText">Select a difficulty</span></p>
+
+    <div id="wordDisplay" class="word-box">_ _ _ _</div>
+
+    <input type="text" id="letterInput" maxlength="1" placeholder="Type a letter" />
+    <button onclick="guessLetter()">🎯 Guess</button>
+
+    <div class="info">
+      <p>❌ Wrong Letters: <span id="wrongLetters">None</span></p>
+      <p>❤️ Lives Left: <span id="lives">5</span></p>
+    </div>
+
+    <button class="restart" onclick="startGame()">🔁 Restart Game</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
